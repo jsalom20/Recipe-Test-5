@@ -25,6 +25,7 @@
 		40FE622E2A118C64004343DB /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE622D2A118C64004343DB /* Ingredient.swift */; };
 		40FE62302A118DB9004343DB /* IngredientSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE622F2A118DB9004343DB /* IngredientSection.swift */; };
 		40FE62322A119028004343DB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE62312A119028004343DB /* Category.swift */; };
+		40FE62342A12E4BE004343DB /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE62332A12E4BE004343DB /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		40FE622D2A118C64004343DB /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		40FE622F2A118DB9004343DB /* IngredientSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSection.swift; sourceTree = "<group>"; };
 		40FE62312A119028004343DB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		40FE62332A12E4BE004343DB /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				40FE622D2A118C64004343DB /* Ingredient.swift */,
 				40FE622B2A1187D7004343DB /* Unit.swift */,
 				40FE621B2A0DE1AE004343DB /* RecipeService.swift */,
+				40FE62332A12E4BE004343DB /* Keys.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				40FE62232A0EFED8004343DB /* CategoryListView.swift in Sources */,
 				40FE622E2A118C64004343DB /* Ingredient.swift in Sources */,
 				40FE62302A118DB9004343DB /* IngredientSection.swift in Sources */,
+				40FE62342A12E4BE004343DB /* Keys.swift in Sources */,
 				40FE621A2A0DE158004343DB /* Recipe.swift in Sources */,
 				40FE622C2A1187D7004343DB /* Unit.swift in Sources */,
 				40FE61F12A0DE11C004343DB /* ContentView.swift in Sources */,

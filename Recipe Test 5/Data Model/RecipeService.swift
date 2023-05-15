@@ -8,8 +8,7 @@ import SwiftUI
 import Foundation
 import Contentful
 
-let spaceId = "1yns9htp3ulv"
-let accessToken = "HlCfLg8N4chIsBVCaaUEkLjunLFv2X_56zAP2HpeIpM"
+
 let contentTypeClasses: [EntryDecodable.Type] = [Unit.self, Ingredient.self, IngredientSection.self, Recipe.self, Category.self]
 let client = Client(spaceId: spaceId, accessToken: accessToken, contentTypeClasses: contentTypeClasses)
 
