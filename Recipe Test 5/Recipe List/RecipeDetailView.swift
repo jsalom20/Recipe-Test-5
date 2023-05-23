@@ -100,7 +100,7 @@ struct RecipeDetailView: View {
                         .font(.headline)
                     .padding(.top)
                     
-                    Text(recipe.instructions)
+                    Text(recipe.instructionsLocalized)
                         .font(.callout)
                 }
                 

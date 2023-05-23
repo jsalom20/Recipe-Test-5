@@ -31,6 +31,7 @@ func getArray(id: String, completion: @escaping([Recipe]) -> ()) {
 }
 
 
+
 class RecipeStore: ObservableObject {
     @Published var recipes: [Recipe] = []
     
@@ -45,15 +46,7 @@ class RecipeStore: ObservableObject {
         //recipes = []
         DispatchQueue.main.async {
             getArray(id: "recipe")  { items in
-                
                 self.recipes = items
-                //print("Hello world")
-               // print(items.first?.category?)
-               // print(items.count)
-               // print(items.first?.description)
-               // print(items.last?.image?.url)
-               // print(items.last?.category?.id)
-               // print(items.last?.ingredientSections?.first?.name)
             }
         }
     }

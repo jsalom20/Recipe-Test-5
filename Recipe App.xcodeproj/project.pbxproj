@@ -23,10 +23,12 @@
 		40FE62272A0EFF17004343DB /* CategoryRecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE62262A0EFF17004343DB /* CategoryRecipeListView.swift */; };
 		40FE622C2A1187D7004343DB /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE622B2A1187D7004343DB /* Unit.swift */; };
 		40FE622E2A118C64004343DB /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE622D2A118C64004343DB /* Ingredient.swift */; };
-		40FE62302A118DB9004343DB /* IngredientSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE622F2A118DB9004343DB /* IngredientSection.swift */; };
+		40FE62302A118DB9004343DB /* IngredientsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE622F2A118DB9004343DB /* IngredientsSection.swift */; };
 		40FE62322A119028004343DB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE62312A119028004343DB /* Category.swift */; };
-		40FE62342A12E4BE004343DB /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE62332A12E4BE004343DB /* Keys.swift */; };
 		40FE62362A156582004343DB /* API Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE62352A156581004343DB /* API Keys.swift */; };
+		40FE62382A157189004343DB /* Chip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE62372A157189004343DB /* Chip.swift */; };
+		40FE623B2A1574EC004343DB /* Chip Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE623A2A1574EC004343DB /* Chip Section.swift */; };
+		40FE623D2A16CBE6004343DB /* ChipSmall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE623C2A16CBE6004343DB /* ChipSmall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,10 +68,12 @@
 		40FE62262A0EFF17004343DB /* CategoryRecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRecipeListView.swift; sourceTree = "<group>"; };
 		40FE622B2A1187D7004343DB /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		40FE622D2A118C64004343DB /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
-		40FE622F2A118DB9004343DB /* IngredientSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientSection.swift; sourceTree = "<group>"; };
+		40FE622F2A118DB9004343DB /* IngredientsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsSection.swift; sourceTree = "<group>"; };
 		40FE62312A119028004343DB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		40FE62332A12E4BE004343DB /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		40FE62352A156581004343DB /* API Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Keys.swift"; sourceTree = "<group>"; };
+		40FE62372A157189004343DB /* Chip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chip.swift; sourceTree = "<group>"; };
+		40FE623A2A1574EC004343DB /* Chip Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chip Section.swift"; sourceTree = "<group>"; };
+		40FE623C2A16CBE6004343DB /* ChipSmall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipSmall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 			children = (
 				40FE62202A0EFEBE004343DB /* RecipeListView.swift */,
 				40FE62242A0EFF05004343DB /* RecipeDetailView.swift */,
+				40FE62392A1574CE004343DB /* Components */,
 			);
 			path = "Recipe List";
 			sourceTree = "<group>";
@@ -181,14 +186,23 @@
 			children = (
 				40FE62192A0DE158004343DB /* Recipe.swift */,
 				40FE62312A119028004343DB /* Category.swift */,
-				40FE622F2A118DB9004343DB /* IngredientSection.swift */,
+				40FE622F2A118DB9004343DB /* IngredientsSection.swift */,
 				40FE622D2A118C64004343DB /* Ingredient.swift */,
 				40FE622B2A1187D7004343DB /* Unit.swift */,
 				40FE621B2A0DE1AE004343DB /* RecipeService.swift */,
 				40FE62352A156581004343DB /* API Keys.swift */,
-				40FE62332A12E4BE004343DB /* Keys.swift */,
 			);
 			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		40FE62392A1574CE004343DB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				40FE62372A157189004343DB /* Chip.swift */,
+				40FE623C2A16CBE6004343DB /* ChipSmall.swift */,
+				40FE623A2A1574EC004343DB /* Chip Section.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +287,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 40FE61E62A0DE11C004343DB /* Build configuration list for PBXProject "Recipe Test 5" */;
+			buildConfigurationList = 40FE61E62A0DE11C004343DB /* Build configuration list for PBXProject "Recipe App" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -330,11 +344,13 @@
 				40FE62252A0EFF05004343DB /* RecipeDetailView.swift in Sources */,
 				40FE62232A0EFED8004343DB /* CategoryListView.swift in Sources */,
 				40FE622E2A118C64004343DB /* Ingredient.swift in Sources */,
-				40FE62302A118DB9004343DB /* IngredientSection.swift in Sources */,
-				40FE62342A12E4BE004343DB /* Keys.swift in Sources */,
+				40FE623B2A1574EC004343DB /* Chip Section.swift in Sources */,
+				40FE62302A118DB9004343DB /* IngredientsSection.swift in Sources */,
 				40FE62362A156582004343DB /* API Keys.swift in Sources */,
 				40FE621A2A0DE158004343DB /* Recipe.swift in Sources */,
+				40FE623D2A16CBE6004343DB /* ChipSmall.swift in Sources */,
 				40FE622C2A1187D7004343DB /* Unit.swift in Sources */,
+				40FE62382A157189004343DB /* Chip.swift in Sources */,
 				40FE61F12A0DE11C004343DB /* ContentView.swift in Sources */,
 				40FE62272A0EFF17004343DB /* CategoryRecipeListView.swift in Sources */,
 				40FE62212A0EFEBE004343DB /* RecipeListView.swift in Sources */,
@@ -499,6 +515,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Recipe App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -514,7 +532,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.joelsalomonsson.Recipe-Test-5";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joelsalomonsson.Recipe-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -537,6 +555,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Recipe App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -552,7 +572,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.joelsalomonsson.Recipe-Test-5";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.joelsalomonsson.Recipe-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -655,7 +675,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		40FE61E62A0DE11C004343DB /* Build configuration list for PBXProject "Recipe Test 5" */ = {
+		40FE61E62A0DE11C004343DB /* Build configuration list for PBXProject "Recipe App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				40FE620E2A0DE11E004343DB /* Debug */,

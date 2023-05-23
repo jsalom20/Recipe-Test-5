@@ -8,13 +8,13 @@
 import Foundation
 import Contentful
 
-final class IngredientSection: EntryDecodable, FieldKeysQueryable, Identifiable {
+final class IngredientsSection: EntryDecodable, FieldKeysQueryable, Identifiable {
     enum FieldKeys: String, CodingKey {
         case name
         case ingredients
     }
     
-    static let contentTypeId: String = "ingredientSection"
+    static let contentTypeId: String = "ingredientsSection"
     
     // FlatResource members.
     let id: String
@@ -33,15 +33,9 @@ final class IngredientSection: EntryDecodable, FieldKeysQueryable, Identifiable 
         updatedAt       = sys.updatedAt
         createdAt       = sys.createdAt
         
-        let fields      = try decoder.contentfulFieldsContainer(keyedBy: IngredientSection.FieldKeys.self)
+        let fields      = try decoder.contentfulFieldsContainer(keyedBy: IngredientsSection.FieldKeys.self)
         
         self.name       = try fields.decode(String.self, forKey: .name)
-        if let ingredients = try fields.decodeIfPresent([Ingredient].self, forKey: .ingredients) {
-            self.ingredients = ingredients
-        } else {
-            print("No ingredients found for ingredient section: \(id)")
-        }
-        //self.ingredients = try fields.decodeIfPresent([Ingredient].self, forKey: .ingredients)
         
         
         do {

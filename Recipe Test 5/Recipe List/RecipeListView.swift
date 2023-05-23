@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RecipeListView: View {
     @ObservedObject var store: RecipeStore
-
+    
     var body: some View {
         NavigationView {
             List(store.recipes) { recipe in
@@ -46,6 +46,10 @@ struct RecipeListView: View {
                 }
             }
             .navigationTitle("Recipes")
+            .refreshable {
+                store.refreshView()
+            }
         }
+        
     }
 }

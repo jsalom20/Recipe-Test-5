@@ -7,6 +7,8 @@
 
 import Foundation
 import Contentful
+import SwiftUI
+
 
 final class Recipe: EntryDecodable, FieldKeysQueryable, Identifiable {
     enum FieldKeys: String, CodingKey {
@@ -27,6 +29,9 @@ final class Recipe: EntryDecodable, FieldKeysQueryable, Identifiable {
     let tags: [String]?
     var image: Asset?
     let instructions: String
+    var instructionsLocalized: LocalizedStringKey {
+        return LocalizedStringKey(instructions)
+    }
     var ingredientSections: [IngredientsSection]?
     var category: Category?
     
