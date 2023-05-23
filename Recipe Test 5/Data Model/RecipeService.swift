@@ -9,12 +9,13 @@ import Foundation
 import Contentful
 
 
-let contentTypeClasses: [EntryDecodable.Type] = [Unit.self, Ingredient.self, IngredientSection.self, Recipe.self, Category.self]
+let contentTypeClasses: [EntryDecodable.Type] = [Unit.self, Ingredient.self, IngredientsSection.self, Recipe.self, Category.self]
 let client = Client(spaceId: spaceId, accessToken: accessToken, contentTypeClasses: contentTypeClasses)
 
 
 func getArray(id: String, completion: @escaping([Recipe]) -> ()) {
     let query = QueryOn<Recipe>.where(contentTypeId: id)
+    query.include(5)
     try! query.order(by: Ordering(sys: .createdAt, inReverse: true)) // ordering the list of articles by created date
     
     client.fetchArray(of: Recipe.self, matching: query) { result in
@@ -58,7 +59,4 @@ class RecipeStore: ObservableObject {
     }
     
 }
-
-//https://cdn.contentful.com/spaces/{1yns9htp3ulv}/environments/{master}/entries/{6RZNdafGIFTtSSUoy5FK6B}?access_token={HlCfLg8N4chIsBVCaaUEkLjunLFv2X_56zAP2HpeIpM}
-//https://cdn.contentful.com/spaces/1yns9htp3ulv/environments/master/entries/5968LMHVACuBkPpitqvNnC?access_token=HlCfLg8N4chIsBVCaaUEkLjunLFv2X_56zAP2HpeIpM
 

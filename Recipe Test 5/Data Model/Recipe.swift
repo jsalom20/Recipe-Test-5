@@ -27,7 +27,7 @@ final class Recipe: EntryDecodable, FieldKeysQueryable, Identifiable {
     let tags: [String]?
     var image: Asset?
     let instructions: String
-    var ingredientSections: [IngredientSection]?
+    var ingredientSections: [IngredientsSection]?
     var category: Category?
     
     public required init(from decoder: Decoder) throws {
@@ -53,9 +53,7 @@ final class Recipe: EntryDecodable, FieldKeysQueryable, Identifiable {
         
         //IngredientSection
         try fields.resolveLinksArray(forKey: .ingredientSections, decoder: decoder) { [weak self] ingredientSections in
-            self?.ingredientSections = ingredientSections as? [IngredientSection]
-            print("IngredientSections: \(ingredientSections)")
-            print("Decoded IngredientSections: \(String(describing: self?.ingredientSections))")
+            self?.ingredientSections = ingredientSections as? [IngredientsSection]
         }
         
         //Category

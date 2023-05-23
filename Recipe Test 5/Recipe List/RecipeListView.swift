@@ -40,6 +40,7 @@ struct RecipeListView: View {
                             Text(recipe.description ?? "")
                                 .font(.subheadline)
                                 .foregroundColor(.secondary)
+                                .lineLimit(1)
                         }
                     }
                 }
