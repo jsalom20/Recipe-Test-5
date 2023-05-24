@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40693B962A1ECF2400E46E8C /* RecipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40693B952A1ECF2400E46E8C /* RecipeCard.swift */; };
+		40693B982A1EF72F00E46E8C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40693B972A1EF72F00E46E8C /* HomeView.swift */; };
+		407313812A1E8FCC00AD5699 /* IngredientRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407313802A1E8FCB00AD5699 /* IngredientRow.swift */; };
 		40FE61EF2A0DE11C004343DB /* Recipe_Test_5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE61EE2A0DE11C004343DB /* Recipe_Test_5App.swift */; };
 		40FE61F12A0DE11C004343DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE61F02A0DE11C004343DB /* ContentView.swift */; };
 		40FE61F32A0DE11E004343DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40FE61F22A0DE11E004343DB /* Assets.xcassets */; };
@@ -49,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40693B952A1ECF2400E46E8C /* RecipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCard.swift; sourceTree = "<group>"; };
+		40693B972A1EF72F00E46E8C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		407313802A1E8FCB00AD5699 /* IngredientRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientRow.swift; sourceTree = "<group>"; };
 		40FE61EB2A0DE11C004343DB /* Recipe Test 5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe Test 5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40FE61EE2A0DE11C004343DB /* Recipe_Test_5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_Test_5App.swift; sourceTree = "<group>"; };
 		40FE61F02A0DE11C004343DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				40FE62202A0EFEBE004343DB /* RecipeListView.swift */,
+				40693B972A1EF72F00E46E8C /* HomeView.swift */,
 				40FE62242A0EFF05004343DB /* RecipeDetailView.swift */,
 				40FE62392A1574CE004343DB /* Components */,
 			);
@@ -198,9 +205,11 @@
 		40FE62392A1574CE004343DB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				407313802A1E8FCB00AD5699 /* IngredientRow.swift */,
 				40FE62372A157189004343DB /* Chip.swift */,
 				40FE623C2A16CBE6004343DB /* ChipSmall.swift */,
 				40FE623A2A1574EC004343DB /* Chip Section.swift */,
+				40693B952A1ECF2400E46E8C /* RecipeCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -349,14 +358,17 @@
 				40FE62362A156582004343DB /* API Keys.swift in Sources */,
 				40FE621A2A0DE158004343DB /* Recipe.swift in Sources */,
 				40FE623D2A16CBE6004343DB /* ChipSmall.swift in Sources */,
+				407313812A1E8FCC00AD5699 /* IngredientRow.swift in Sources */,
 				40FE622C2A1187D7004343DB /* Unit.swift in Sources */,
 				40FE62382A157189004343DB /* Chip.swift in Sources */,
+				40693B962A1ECF2400E46E8C /* RecipeCard.swift in Sources */,
 				40FE61F12A0DE11C004343DB /* ContentView.swift in Sources */,
 				40FE62272A0EFF17004343DB /* CategoryRecipeListView.swift in Sources */,
 				40FE62212A0EFEBE004343DB /* RecipeListView.swift in Sources */,
 				40FE61EF2A0DE11C004343DB /* Recipe_Test_5App.swift in Sources */,
 				40FE621C2A0DE1AE004343DB /* RecipeService.swift in Sources */,
 				40FE62322A119028004343DB /* Category.swift in Sources */,
+				40693B982A1EF72F00E46E8C /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +539,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -567,7 +579,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;

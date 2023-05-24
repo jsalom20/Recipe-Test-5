@@ -11,7 +11,7 @@ struct ChipSmall: View {
     var label: String
     var body: some View {
         Text(label)
-            .font(.caption2)
+            .font(.footnote)
             .padding(.horizontal, 8)
             .padding(.vertical, 4)
             .background(Color.accentColor.opacity(0.1))
