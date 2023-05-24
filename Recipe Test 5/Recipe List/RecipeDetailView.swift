@@ -9,43 +9,36 @@ import SwiftUI
 
 struct RecipeDetailView: View {
     var recipe: Recipe
-    
-    let formatter: NumberFormatter = {
-            let formatter = NumberFormatter()
-        formatter.numberStyle = .decimal
-            return formatter
-        }()
-    
-    
+
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: 24) {
                 
-                //Image
-                if let imageURL = recipe.image?.url {
-                    AsyncImage(url: imageURL) { image in
-                        image
-                            .resizable()
-                            //.aspectRatio(contentMode: .fit)
-                            .frame(height: 200)
-                            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-                    } placeholder: {
-                        ProgressView()
-                            .frame(height: 200)
-                            .frame(maxWidth: .infinity)
-                    }
-                }
+                
                 
                 //Tags
-                VStack(alignment: .leading){
-                    if let tags = recipe.tags {
-                        //Text("Tags")
-                            //.font(.footnote)
-                           // .padding(.top)
-                        
-                        HStack {
-                            ForEach(tags, id: \.self) { tag in
-                                ChipSmall(label: tag)
+                VStack(alignment: .leading, spacing: 8.0) {
+                    //Image
+                    if let imageURL = recipe.image?.url {
+                        AsyncImage(url: imageURL) { image in
+                            image
+                                .resizable()
+                                //.aspectRatio(contentMode: .fit)
+                                .frame(height: 200)
+                                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                        } placeholder: {
+                            ProgressView()
+                                .frame(height: 200)
+                                .frame(maxWidth: .infinity)
+                        }
+                    }
+                    
+                    VStack(alignment: .leading){
+                        if let tags = recipe.tags {
+                            HStack {
+                                ForEach(tags, id: \.self) { tag in
+                                    ChipSmall(label: tag)
+                                }
                             }
                         }
                     }
@@ -61,9 +54,9 @@ struct RecipeDetailView: View {
                     //Description
                     if let description = recipe.description {
                         Text(description)
-                            .font(.subheadline)
-                            //.font(.system(.subheadline, design: .rounded))
-                            .foregroundColor(.secondary)
+                           // .font(.subheadline)
+                            .font(.system(.subheadline, design: .serif))
+                            .foregroundColor(.primary)
                             .multilineTextAlignment(.leading)
                     }
                 }
@@ -73,21 +66,20 @@ struct RecipeDetailView: View {
                 //Ingredient Section
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Ingredients")
-                        //.font(.title3)
-                        .fontWeight(.bold)
+                        .fontWeight(.medium)
                         .font(.system(.title3, design: .rounded))
                     
-                    ForEach(recipe.ingredientSections ?? []) { ingredientSection in
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(ingredientSection.name)
-                                .font(.subheadline)
-                                .fontWeight(.bold)
-                            
-                            ForEach(ingredientSection.ingredients ?? []) { ingredient in
-                                HStack {
-                                    Text(ingredient.name)
-                                    Text("\(ingredient.amount)")
-                                    Text(ingredient.unit?.name ?? "")
+                    VStack(spacing: 16) {
+                        ForEach(recipe.ingredientSections ?? []) { ingredientSection in
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text(ingredientSection.name)
+                                    .fontWeight(.bold)
+                                    .font(.system(.subheadline, design: .rounded))
+                                
+                                VStack(spacing: 4) {
+                                    ForEach(ingredientSection.ingredients ?? []) { ingredient in
+                                        IngredientRow(name: ingredient.name, unit: ingredient.unit?.name ?? "", amount: ingredient.amount)
+                                    }
                                 }
                             }
                         }
@@ -97,7 +89,8 @@ struct RecipeDetailView: View {
                 //Instructions
                 VStack(alignment: .leading, spacing: 8.0) {
                     Text("Instructions")
-                        .font(.headline)
+                        .fontWeight(.bold)
+                        .font(.system(.title3, design: .rounded))
                     .padding(.top)
                     
                     Text(recipe.instructionsLocalized)
@@ -105,10 +98,10 @@ struct RecipeDetailView: View {
                 }
                 
                 //Category
-                if let categoryName = recipe.category?.name {
-                    Text("Category: \(categoryName)")
-                        .padding(.bottom)
-                }
+               // if let categoryName = recipe.category?.name {
+                 //   Text("Category: \(categoryName)")
+                   //     .padding(.bottom)
+                //}
                 
                 Spacer()
             }
